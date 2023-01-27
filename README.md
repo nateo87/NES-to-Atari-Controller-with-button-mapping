@@ -9,7 +9,7 @@ But what if you want A to be used for fire instead, as is often in a lot of shoo
 
 Most have the A button of the NES controller bridged over to the 'up' direction to act as a sort of jump button, but here instead, we'll be using a 7400 as an S-R latch which opens/closes one of two switching transistors. These transistors' collectors are each wired to a different input ('fire' and 'up'), and both emitters run out to the A button. Start and Select act as SET and RESET. To use Start and Select reliably as these toggles, it's also necessary to have them pulled high by way of a resistor (10k oughta do just fine). A decoupling capacitor for the 7400 also isn't a bad idea. 
 
-Here's the schematic I did on KiCad in order to make a small PCB with SMD components in order to make the mod neat and tidy:
+Here's the schematic I did on KiCad to make a small PCB with SMD components in order to make the mod neat and tidy:
 ![schematic](https://github.com/nateo87/NES-to-Atari-Controller-with-button-mapping/blob/main/ButtonMappingSwapSchematic.png)
 
 A 74HCT can be substituted for the LS variety without issue, and I don't believe the HC variety would cause issues either. And really, any old switching NPN transistor should work just fine. I use 2N2222s myself instead of 2N3904s just because I have so damn many of them. The whole circuit consumes very little current, and falls well under the recommened limit of 100mA on the Atari controller port.
