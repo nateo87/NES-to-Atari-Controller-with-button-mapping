@@ -8,3 +8,6 @@ But what if you want A to be used for fire instead, as is often in a lot of shoo
 (Before I explain further - if you don't know the basics of how to mod an NES controller for use on the Atari standard and want to know what to expect, I can heartily recommend [this foolproof guide](https://raskulous.com/2020/02/convert-an-original-nes-controller-for-use-on-commodore-64-amiga-atari-and-many-others/) )
 
 Most have the A button of the NES controller bridged over to the 'up' direction to act as a sort of jump button, but here instead, we'll be using a 7400 as an S-R latch which opens/closes one of two switching transistors. These transistors' collectors are each wired to a different input ('fire' and 'up'), and both emitters run out to the A button. Start and Select act as SET and RESET. To use Start and Select reliably as these toggles, it's also necessary to have them pulled high by way of a resistor (10k oughta do just fine). A decoupling capacitor for the 7400 also isn't a bad idea. 
+
+Here's the schematic I did on KiCad in order to make a small PCB with SMD components in order to make the mod neat and tidy:
+![schematic](https://github.com/nateo87/NES-to-Atari-Controller-with-button-mapping/blob/main/ButtonMappingSwapSchematic.png)
