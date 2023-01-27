@@ -11,3 +11,5 @@ Most have the A button of the NES controller bridged over to the 'up' direction 
 
 Here's the schematic I did on KiCad in order to make a small PCB with SMD components in order to make the mod neat and tidy:
 ![schematic](https://github.com/nateo87/NES-to-Atari-Controller-with-button-mapping/blob/main/ButtonMappingSwapSchematic.png)
+
+Of course, using this tidy little PCB isn't strictly necessary; if you don't mind weaving a little spider's web of wires and hot glue, you can just tack the circuit to the back of the controller PCB using normal throughhole components! Mmmm, makeshift DIY...
