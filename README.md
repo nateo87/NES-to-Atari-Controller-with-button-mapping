@@ -9,9 +9,14 @@ But what if you want A to be used for fire instead, as is often in a lot of shoo
 
 Most have the A button of the NES controller bridged over to the 'up' direction to act as a sort of jump button, but here instead, we'll be using a 7400 as an S-R latch which opens/closes one of two switching transistors. These transistors' collectors are each wired to a different input ('fire' and 'up'), and both emitters run out to the A button. Start and Select act as SET and RESET. To use Start and Select reliably as these toggles, it's also necessary to have them pulled high by way of a resistor (10k oughta do just fine). A decoupling capacitor for the 7400 also isn't a bad idea. 
 
-Here's the schematic I did on KiCad to make a small PCB with SMD components in order to make the mod neat and tidy:
+Here's the schematic I did on KiCad to make a small PCB with SMD components in order to make the mod neat and tidy (note that I haven't built this yet for myself):
 ![schematic](https://github.com/nateo87/NES-to-Atari-Controller-with-button-mapping/blob/main/ButtonMappingSwapSchematic.png)
+![pcb example](https://github.com/nateo87/NES-to-Atari-Controller-with-button-mapping/blob/main/NES2600buttonswitch.png)
 
 A 74HCT can be substituted for the LS variety without issue, and I don't believe the HC variety would cause issues either. And really, any old switching NPN transistor should work just fine. I use 2N2222s myself instead of 2N3904s just because I have so damn many of them. The whole circuit consumes very little current, and falls well under the recommened limit of 100mA on the Atari controller port.
 
 Of course, using this tidy little PCB isn't strictly necessary; if you don't mind weaving a little spider's web of wires and hot glue, you can just tack the circuit to the back of the controller PCB using normal throughhole components! Mmmm, makeshift DIY...
+![prototype](https://github.com/nateo87/NES-to-Atari-Controller-with-button-mapping/blob/main/bigmessofwires.jpg)
+
+The front of the controller PCB can have the resistors wired in like this. You'll notice I'm using the same tie points on the PCB that were originally used for the Parallel/Serial control on the 4021 IC - it was just a convenient place to put the 5v rail I needed to attach the pull-up resistors to. Using a multimeter, it's pretty easy to suss out which pin carries which button signal, and wire the 9-pin cable accordingly. 
+![front of controller PCB](https://github.com/nateo87/NES-to-Atari-Controller-with-button-mapping/blob/main/frontpcbcontroller.jpg)
